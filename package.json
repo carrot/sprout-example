@@ -14,5 +14,8 @@
     "chai-as-promised": "4.3.x",
     "sprout": "0.4.x",
     "rimraf": "2.3.x"
+  },
+  "dependencies": {
+    "chalk": "^1.0.0"
   }
 }

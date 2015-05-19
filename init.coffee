@@ -1,23 +1,37 @@
+chalk = require 'chalk'
+
 exports.configure = [
   {
     name: 'name'
-    message: 'What is the name of your project?'
+    message: 'What is your name?'
   },
   {
-    name: 'description'
-    message: 'Describe your project'
-  },
-  {
-    name: 'github_username'
-    message: 'What is your github username?'
+    name: 'food'
+    type: 'list'
+    message: 'What is your favorite food?'
+    choices: ['pizza', 'sushi', 'cookies', 'other']
   }
 ]
 
-exports.before = (utils, config) ->
-  # before hook
+exports.before = (utils) ->
+  # EXAMPLE:
+  # an example of including an external module
+  console.log chalk.bgBlue("initializing your project!")
 
 exports.beforeRender = (utils, config) ->
-  # before_render hook
+  emojis = {
+    'pizza': ':pizza:',
+    'sushi': ':sushi:',
+    'cookies': ':cookie',
+    'other': ':rowboat'
+  }
+
+  # EXAMPLE:
+  # adding a new `food` local to be passed to our templates
+  config.emoji = emojis[config.food]
 
 exports.after = (utils, config) ->
-  # after hook
+  # EXAMPLE:
+  # using sprout.utils to create a new file
+  tgt = config.food + '.md'
+  utils.target.write(tgt, 'this is the content of my new file!')

@@ -22,5 +22,10 @@ describe 'init', ->
     tgt = path.join(test_path, 'readme.md')
     fs.existsSync(tgt).should.be.ok
     contents = fs.readFileSync(tgt, 'utf8')
-    contents.should.match /# project x/
+    contents.should.match /SUSHI/
+    done()
+
+  it 'properly adds a new file based on after hook', (done) ->
+    tgt = path.join(test_path, 'sushi.md')
+    fs.existsSync(tgt).should.be.ok
     done()
