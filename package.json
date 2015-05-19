@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "an example sprout template to demonstrate sprout&#39;s features",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "open": "./node_modules/.bin/mocha && open test/tmp/readme.md"
   },
   "author": "",
   "license": "MIT",
