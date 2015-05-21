@@ -27,7 +27,7 @@ exports.beforeRender = (utils, config) ->
   }
 
   # EXAMPLE:
-  # adding a new `food` local to be passed to our templates
+  # adding a new `emoji` local to be passed to our templates
   config.emoji = emojis[config.food]
 
 exports.after = (utils, config) ->
