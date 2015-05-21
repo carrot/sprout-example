@@ -1,5 +1,9 @@
 chalk = require 'chalk'
 
+# the CLI inputs are extremely powerful, and include features like
+# validation, filters, conditionals and more;
+# all powered by https://github.com/SBoudrias/Inquirer.js
+# reference their docs to see how to use it's full power
 exports.configure = [
   {
     name: 'name'
